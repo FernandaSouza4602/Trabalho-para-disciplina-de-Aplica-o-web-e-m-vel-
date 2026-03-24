@@ -1,0 +1,150 @@
+/* Reset básico e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #444;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Espaçamento uniforme */
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 1000px;
+    width: 90%;
+    margin: 40px 0;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p, li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+ul {
+    list-style-position: inside;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* Formulário de Contato */
+#contato {
+    background-color: transparent;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+    text-align: left;
+}
+
+input, textarea, button {
+    padding: 18px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.2);
+    outline: none;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
